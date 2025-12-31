@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brandon Davis - Game Design Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme -->
+    <link rel="stylesheet" href="css/mysite.css">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/myscripts.js" defer></script>
+</head>
+<body>
+
+<!-- Page transition overlay -->
+<div id="pageTransition"><div class="transitionText">Loading...</div></div>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Brandon Davis</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="photos.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hobbies.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tando.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="p5-hero">
+    <div class="p5-hero-inner p5-enter">
+        <div>
+            <div class="p5-hero-badge">Game Design · Narrative · Systems</div>
+            <h1 class="p5-hero-title">Brandon Davis</h1>
+            <p class="p5-hero-tagline" id="dynamicTagline">
+                Crafting stories, systems, and experiences that players remember.
+            </p>
+
+            <p class="mb-3">
+                I’m an aspiring game designer focused on narrative design, mechanics, and presentation.
+                This portfolio highlights my early projects, visual inspirations, and the skills I’m building.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2">
+                <a href="tando.html" class="btn btn-p5-primary">View My Projects</a>
+                <a href="photos.html" class="btn btn-p5-secondary">Explore Gallery</a>
+            </div>
+        </div>
+
+        <aside class="p5-hero-card p5-pop">
+            <div class="p5-hero-card-inner">
+                <img src="images/profile.jpg" alt="Brandon Davis">
+                <h2 class="mb-2" style="font-family:'Bebas Neue',cursive; text-transform:uppercase; letter-spacing:1px;">
+                    Designer in Progress
+                </h2>
+                <p class="mb-0">
+                    Building toward narrative + gameplay systems design through coursework and personal projects.
+                </p>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<main class="container content-container p5-enter">
+    <h2 class="section-title">What You’ll Find Here</h2>
+    <p class="section-subtitle">
+        A Persona-inspired portfolio hub: visuals, skills, and projects—presented with bold motion and clean readability.
+    </p>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="p5-panel">
+                <h3 class="card-title">Gallery</h3>
+                <p>Visual inspiration, mood, and style references that influence my design direction.</p>
+                <a href="photos.html" class="btn btn-p5-primary btn-sm mt-2">Open Gallery</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p5-panel">
+                <h3 class="card-title">Skills</h3>
+                <p>My core focus areas: narrative design, systems, UI direction, and prototyping foundations.</p>
+                <a href="hobbies.html" class="btn btn-p5-primary btn-sm mt-2">View Skills</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p5-panel">
+                <h3 class="card-title">Projects</h3>
+                <p>Early work and experiments that show progress in design thinking and implementation.</p>
+                <a href="tando.html" class="btn btn-p5-primary btn-sm mt-2">See Projects</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Brandon Davis | Game Design Portfolio</p>
+</footer>
+
+<button id="backToTopBtn">↑</button>
+</body>
+</html>

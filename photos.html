@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery - Brandon Davis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/mysite.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/myscripts.js" defer></script>
+</head>
+<body>
+
+<div id="pageTransition"><div class="transitionText">Loading...</div></div>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">Brandon Davis</a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="photos.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hobbies.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tando.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="p5-hero-small">
+    <h1>Visual Gallery</h1>
+    <p>Four key images that define the mood and style I aim for in my work.</p>
+</section>
+
+<main class="container content-container p5-enter">
+    <p class="section-subtitle">
+        Inspired by bold composition, high contrast, and strong “poster-like” readability—similar to Persona’s UI panels.
+    </p>
+
+    <!-- Featured Slideshow (4 images only) -->
+    <div id="featuredSlideshow" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="3200">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/photo1.jpg" class="d-block w-100" alt="Featured 1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/photo2.jpg" class="d-block w-100" alt="Featured 2">
+            </div>
+            <div class="carousel-item">
+                <img src="images/photo3.jpg" class="d-block w-100" alt="Featured 3">
+            </div>
+            <div class="carousel-item">
+                <img src="images/photo4.jpg" class="d-block w-100" alt="Featured 4">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#featuredSlideshow" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#featuredSlideshow" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <h2 class="section-title">Thumbnails</h2>
+    <div class="photo-gallery">
+        <img src="images/photo1.jpg" alt="Photo 1">
+        <img src="images/photo2.jpg" alt="Photo 2">
+        <img src="images/photo3.jpg" alt="Photo 3">
+        <img src="images/photo4.jpg" alt="Photo 4">
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Brandon Davis | Game Design Portfolio</p>
+</footer>
+
+<button id="backToTopBtn">↑</button>
+</body>
+</html>

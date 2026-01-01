@@ -1,106 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Skills - Brandon Davis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Skills - Brandon Davis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/mysite.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/mysite.css">
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="js/myscripts.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/myscripts.js" defer></script>
 </head>
 <body>
 
-<div id="pageTransition"><div class="transitionText">Loading...</div></div>
+<div id="pageTransition" style="position:fixed;inset:0;transform:translateX(-110%);pointer-events:none;z-index:9999;">
+  <div class="transitionText">Loading...</div>
+</div>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="index.html">Brandon Davis</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Brandon Davis</a>
 
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="photos.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="hobbies.html">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tando.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="feedback.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="photos.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="hobbies.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="tando.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="feedback.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
 
 <section class="p5-hero-small">
-    <h1>Skills & Focus</h1>
-    <p>Narrative, systems, UI direction, and prototyping fundamentals.</p>
+  <h1>Skills & Focus</h1>
+  <p>Narrative, systems, UI direction, and prototyping fundamentals.</p>
 </section>
 
-<main class="container content-container p5-enter">
-    <p class="section-subtitle">
-        I’m building toward a career in game design by learning how story, mechanics, and presentation work together.
-    </p>
+<main class="container content-container">
+  <p class="section-subtitle">
+    I’m building toward a career in game design by learning how story, mechanics, and presentation work together.
+  </p>
 
-    <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
-        <div class="col">
-            <div class="card h-100 p5-pop">
-                <div class="card-body">
-                    <h5 class="card-title">Narrative Design</h5>
-                    <p>Characters, arcs, dialogue tone, and emotional beats that reinforce the gameplay experience.</p>
-                </div>
-            </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Narrative Design</h5>
+          <p>Characters, arcs, and dialogue tone that support gameplay and emotional payoff.</p>
         </div>
-
-        <div class="col">
-            <div class="card h-100 p5-pop">
-                <div class="card-body">
-                    <h5 class="card-title">Gameplay & Systems</h5>
-                    <p>Balancing, progression loops, and turn-based mechanics with satisfying risk/reward decisions.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100 p5-pop">
-                <div class="card-body">
-                    <h5 class="card-title">UI & Presentation</h5>
-                    <p>Bold but readable layouts—high contrast panels, motion, and clean user flow inspired by Persona.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100 p5-pop">
-                <div class="card-body">
-                    <h5 class="card-title">Programming Foundations</h5>
-                    <p>JavaScript, Java, and the logic needed to prototype interactions and understand technical constraints.</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <div class="text-center mt-5">
-        <button id="toggleHobbyDetailsBtn" class="btn btn-p5-primary">Show / Hide Extra Details</button>
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Gameplay & Systems</h5>
+          <p>Balancing, progression loops, and turn-based mechanics with strong risk/reward choices.</p>
+        </div>
+      </div>
     </div>
 
-    <div id="extraHobbyDetails" class="p5-panel mt-4" style="display:none;">
-        <p class="mb-0">
-            I also study game breakdowns/postmortems, player psychology, and combat pacing. I’m especially interested
-            in how UI motion and sound cues can make interactions feel “snappy” and satisfying.
-        </p>
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">UI & Presentation</h5>
+          <p>Bold but readable layouts using high contrast panels and clean navigation flow.</p>
+        </div>
+      </div>
     </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Programming Foundations</h5>
+          <p>JavaScript + web basics to prototype interactions and better understand technical constraints.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
 <footer>
-    <p>&copy; 2025 Brandon Davis | Game Design Portfolio</p>
+  <p>&copy; 2025 Brandon Davis | Game Design Portfolio</p>
 </footer>
 
 <button id="backToTopBtn">↑</button>

@@ -1,96 +1,58 @@
-// =======================================================
-// PERSONA-STYLE UI INTERACTIONS & PAGE TRANSITIONS
-// =======================================================
+// js/myscripts.js
+// GitHub-safe, stable page transition + back-to-top
 
 document.addEventListener("DOMContentLoaded", () => {
+  const transition = document.getElementById("pageTransition");
 
-    const transition = document.getElementById("pageTransition");
+  // On page load: wipe out quickly (feels like the page lands in)
+  if (transition) {
+    transition.classList.add("exit");
+    window.setTimeout(() => {
+      transition.classList.remove("exit");
+      transition.classList.remove("active");
+    }, 520);
+  }
 
-    // ---------- TRANSITION TYPES ----------
-    const transitions = [
-        "transition-left",
-        "transition-right",
-        "transition-diag",
-        "transition-collapse"
-    ];
+  // Intercept internal .html links (same tab) and play transition
+  document.querySelectorAll('a[href]').forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href) return;
 
-    // ---------- SOUND EFFECTS ----------
-    const clickSound = new Audio("media/ui-click.mp3");
-    const confirmSound = new Audio("media/ui-confirm.mp3");
-    clickSound.volume = 0.4;
-    confirmSound.volume = 0.4;
+    // prevent accidental new tab
+    if (link.getAttribute("target") === "_blank") link.removeAttribute("target");
 
-    // ---------- PAGE LOAD EXIT ----------
-    if (transition) {
-        transition.classList.add("exit");
-        setTimeout(() => {
-            transition.className = "";
-            transition.style.opacity = "0";
-        }, 500);
-    }
+    const isExternal =
+      href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:");
 
-    // ---------- INTERCEPT LINKS ----------
-    document.querySelectorAll("a[href]").forEach(link => {
-        const href = link.getAttribute("href");
+    const isAnchor = href.startsWith("#");
+    const isInternalHtml = href.endsWith(".html") && !isExternal && !isAnchor;
 
-        const isInternal =
-            href &&
-            href.endsWith(".html") &&
-            !href.startsWith("http");
+    if (isInternalHtml) {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
 
-        if (isInternal) {
-            link.removeAttribute("target");
-
-            link.addEventListener("click", e => {
-                e.preventDefault();
-
-                clickSound.currentTime = 0;
-                clickSound.play();
-
-                const effect = transitions[Math.floor(Math.random() * transitions.length)];
-
-                transition.className = effect;
-                transition.style.opacity = "1";
-                transition.classList.add("active");
-
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 420);
-            });
+        if (!transition) {
+          window.location.href = href;
+          return;
         }
-    });
 
-    // ---------- BUTTON SHAKE ----------
-    document.querySelectorAll(".btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-            btn.classList.add("shake");
-            confirmSound.currentTime = 0;
-            confirmSound.play();
-            setTimeout(() => btn.classList.remove("shake"), 250);
-        });
-    });
-
-    // ---------- TYPEWRITER TITLES ----------
-    document.querySelectorAll(".typewriter").forEach(el => {
-        const text = el.textContent;
-        el.textContent = "";
-        let i = 0;
-
-        const interval = setInterval(() => {
-            el.textContent += text.charAt(i);
-            i++;
-            if (i >= text.length) clearInterval(interval);
-        }, 45);
-    });
-
-    // ---------- BACK TO TOP ----------
-    const backBtn = document.getElementById("backToTopBtn");
-    if (backBtn) {
-        window.addEventListener("scroll", () => {
-            backBtn.style.display = window.scrollY > 220 ? "block" : "none";
-        });
-        backBtn.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
+        transition.classList.add("active");
+        window.setTimeout(() => {
+          window.location.href = href;
+        }, 420);
+      });
     }
+  });
+
+  // Back to top button
+  const backBtn = document.getElementById("backToTopBtn");
+  if (backBtn) {
+    window.addEventListener("scroll", () => {
+      backBtn.style.display = window.scrollY > 220 ? "block" : "none";
+    });
+
+    backBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 });
